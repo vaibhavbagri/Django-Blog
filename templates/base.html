@@ -1,0 +1,24 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Blogspot </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static "css/styles.css" %}">
+</head>
+    <body style="background-image: url('{% static "img/img1.png" %}') ; background-size:100% ; background-repeat:no-repeat">
+
+        {% include "navbar.html" %}
+         <div class="a">
+            {% block content %}
+
+            {% endblock %}
+        </div>
+
+        <script src = "{% static 'js/jquery.min.js' %}"></script>
+        <script src = "{% static 'js/bootstrap.min.js' %}"></script>
+        {% block javascript %}
+        {% endblock %}
+    </body>
+</html>
